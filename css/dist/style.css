@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.pc-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em;
+}
+.mobile-nav .hamburger-menu {
+  height: 4rem;
+  width: 4rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid green;
+  gap: 10px;
+}
+.mobile-nav .hamburger-menu .line {
+  height: 2px;
+  width: 70%;
+  background-color: green;
+}
+
+.LANDING-PAGE {
+  background-color: rgba(128, 128, 128, 0.726);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.LANDING-PAGE .banner {
+  gap: 100px;
+  display: flex;
+}
+.LANDING-PAGE .banner .first-text h1 {
+  font-weight: bold;
+}
+.LANDING-PAGE .banner .second-text {
+  margin-top: 30px;
+}
+.LANDING-PAGE button {
+  margin-top: 10px;
+  background-color: green;
+  height: 5vh;
+  width: 60%;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+}
+.LANDING-PAGE .gallery {
+  margin-top: 3%;
+  width: 100%;
+}
+.LANDING-PAGE .Service {
+  background: rgba(128, 128, 128, 0.726);
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {
+  .LANDING-PAGE {
+    height: 50vh;
+  }
+}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .pc-nav {
+    display: block;
+  }
+
+  .pc-nav .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pc-nav .flex-container ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-weight: bold;
+    color: rgba(0, 128, 0, 0.87);
+  }
+  .pc-nav .flex-container ul button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    width: 10vw;
+    color: white;
+    font-size: 24px;
+  }
+
+  .LANDING-PAGE {
+    height: 70vh;
+    display: flex;
+    align-items: baseline;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .pc-nav .flex-container ul {
+    gap: 100px;
+  }
+
+  .benefits .heading-center {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .benefits .center-iterms {
+    text-align: left;
+  }
+
+  .LANDING-PAGE {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .LANDING-PAGE button {
+    height: 6vh;
+    width: 15vw;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width */
